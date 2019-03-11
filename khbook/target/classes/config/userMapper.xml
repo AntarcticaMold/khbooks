@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+	<select id="u_list" parameterType="string" resultType="dto.UserDTO">
+		select * from kh_user
+	</select>
+
+	<insert id="u_ins" parameterType="dto.UserDTO">
+		insert into kh_user
+		values(#{id},#{upwd},#{uname}, #{uemail}, #{uphone}, #{ubirth}, #{ugender})
+	</insert>
+	
+	<delete id="u_delete" parameterType="string" >
+	  delete from kh_user
+	  where id=#{id}
+	</delete>
+	
+	<update id="u_update" parameterType="dto.UserDTO">
+	  update kh_user set uphone=#{uphone}
+	  where  id=#{id}
+	</update>
+
+</mapper>   
+
+
+
+
+
+
+
+
+
+
+
