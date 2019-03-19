@@ -14,8 +14,19 @@ public class UserDTO {
 	public UserDTO() {
 	
 	}
-
 	
+	
+
+	public UserDTO(String id) {
+		super();
+		this.id = id;
+	}
+
+	public UserDTO(String id, String upwd) {
+		super();
+		this.id = id;
+		this.upwd = upwd;
+	}
 
 	public UserDTO(String id, String upwd, String uname, String uemail, String uphone, Date ubirth, int ugender) {
 		super();
@@ -28,7 +39,7 @@ public class UserDTO {
 		this.ugender = ugender;
 	}
 
-
+	
 
 	public String getId() {
 		return id;
